@@ -16,7 +16,7 @@ export CSV_URL="https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-surve
 echo "STEP 1: EXTRACTION - downloading the file..."
 
 # Create a folder called "raw".
-mkdir raw
+mkdir -p raw
 
 # Download the file into the raw folder.
 #curl lets bash download files from the internet.
@@ -38,7 +38,7 @@ fi                  #fi closes the if statement.
 echo "STEP 2: TRANSFORMING - selecting columns..."
 
 # Create the folder for the transformed file.
-mkdir Transformed
+mkdir -p Transformed
 
 # In the downloaded file the columns are numbered like this:
 #   1 = Year        5 = Units        6 = Variable_code        9 = Value
@@ -66,7 +66,7 @@ fi
 echo "STEP 3: LOAD - copying to the Gold folder..."
 
 # Create the Gold folder.
-mkdir Gold
+mkdir -p Gold
 
 # Copy the transformed file into it.
 cp Transformed/2023_year_finance.csv Gold/
