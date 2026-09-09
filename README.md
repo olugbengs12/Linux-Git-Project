@@ -22,7 +22,7 @@ selects four columns, and loads the result into a Gold directory.
 
 ```bash
 chmod +x cde.sh
-./etl.sh
+./cde.sh
 ```
 
 The script runs in three stages and prints a confirmation after each:
